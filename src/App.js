@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import HomePage from './routes/HomePage';
-import RobertProvider from './MyInfoProvider';
+import MyInfoProvider from './MyInfoProvider';
 
 function App() {
 
   return (
-    <RobertProvider>
+    <MyInfoProvider>
       <Router>
         <div className="main-background">
           <Routes>
@@ -15,7 +15,7 @@ function App() {
           </Routes>
         </div>
       </Router>
-    </RobertProvider>
+    </MyInfoProvider>
   );
 }
 

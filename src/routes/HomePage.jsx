@@ -1,9 +1,9 @@
 import React from 'react';
 import Headshot from '../components/Headshot';
 import NavBar from '../components/NavBar';
-import LandingHeaderSection from '../components/sections/LandingHeaderSection/LandingHeaderSection';
-import AboutMeSection from '../components/sections/AboutMeSection/AboutMeSection';
-import ExperiencesSection from '../components/sections/ExperiencesSection/ExperiencesSection';
+import LandingHeaderSection from '../components/LandingHeaderSection';
+import AboutMeSection from '../components/AboutMeSection';
+import ExperiencesSection from '../components/ExperiencesSection';
 
 const HomePage = () => {
 

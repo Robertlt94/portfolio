@@ -1,22 +1,33 @@
 import React, {useState} from 'react';
 import MyInfoContext from './MyInfoContext';
+import CodeIcon from '@mui/icons-material/Code';
+import GroupsIcon from '@mui/icons-material/Groups';
+import CheckIcon from '@mui/icons-material/Check';
+import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
+import Monicat from './components/assets/monicatdata_logo.jpeg';
+import Mdh from './components/assets/reading_math_inc_logo.jpeg';
+import Walmart from './components/assets/walmart_logo.jpeg';
+import Brakebush from './components/assets/brakebush_chicken_logo.jpeg';
+import Randstad from './components/assets/randstadusa_logo.jpeg';
+import Teksystems from './components/assets/teksystems_logo.jpeg';
+import Sppl from './components/assets/saint_paul_public_library_logo.jpeg';
 
 const MyInfoProvider = ({children}) => {
-    const [myInfo] = useState(
+    const [robert] = useState(
         {
-            name: "Robert",
+            fullName: "Robert Thao",
+            profession: ["IT Professional", "Software Engineer", "Project Manager"],
             location: "Minnesota",
-
+            about: "With a rich background spanning public health, retail, and community outreach, I bring a unique perspective to IT, software engineering, and project management. My journey across various industries has refined my problem-solving abilities, leadership skills, and customer-centric approach. Alongside my non-traditional path, I’ve pursued certifications in front-end and back-end development, full-stack software engineering, and project management, driven by a passion for technology and innovation. I thrive in dynamic, fast-paced environments, and am eager to leverage my multifaceted skills to create impactful solutions that meet the needs of both teams and clients."
         }
-    )
-    const [myImages] = useState([])
-    const [myExperiences] = useState(
+    );
+    const [experiences] = useState(
         [
             {
-                start: "July 2024",
-                end: "Aug 2024",
+                duration: "July 2024 - Aug 2024",
                 title: "Software Engineer Intern",
-                logo: "./components/assets/monicatdata_logo.jpeg",
+                icon: <CodeIcon color="" />,
+                logo: <img src={Monicat} className='company-logo' />,
                 company: "Monicat Data",
                 details: [
                     "QA tested web applications manually for bugs and ensured they met final development standards before handoff to clients.",
@@ -25,10 +36,10 @@ const MyInfoProvider = ({children}) => {
                 ]
             },
             {
-                start: "Aug 2023",
-                end: "Jul 2024",
+                duration: "Aug 2023 - Jul 2024",
                 title: "Public Health Project Coordintor",
-                logo: "./components/assets/reading_math_inc_logo.jpeg",
+                icon: <GroupsIcon />,
+                logo: <img src={Mdh} className='company-logo' />,
                 company: "Ampact",
                 details: [
                     "Served my service term at the Minnesota Department of Health with their Community Health Worker Traning Program",
@@ -40,10 +51,10 @@ const MyInfoProvider = ({children}) => {
                 ]
             },
             {
-                start: "Apr 2021",
-                end: "Dec 2021",
+                duration: "Apr 2021 - Dec 2021",
                 title: "Front End Team Lead",
-                logo: "./components/assets/walmart_logo.jpeg",
+                icon: <GroupsIcon />,
+                logo: <img src={Walmart} className='company-logo' />,
                 company: "Walmart",
                 details: [
                     "Oversaw daily operations, including opening/closing, cash handling, self-checkouts, and the maintenance team.",
@@ -53,10 +64,10 @@ const MyInfoProvider = ({children}) => {
                 ]
             },
             {
-                start: "Jul 2020",
-                end: "Apr 2021",
+                duration: "Jul 2020 - Apr 2021",
                 title: "Quality Assurance Specialist & Backup Receiver",
-                logo: "./components/assets/brakebush_chicken_logo.jpeg",
+                icon: <CheckIcon />,
+                logo: <img src={Brakebush} className='company-logo' />,
                 company: "Brakebush Chicken",
                 details: [
                     "Ensured compliance with USDA and company standards through facility testing and inspections.",
@@ -68,10 +79,10 @@ const MyInfoProvider = ({children}) => {
                 ]
             },
             {
-                start: "Jul 2019",
-                end: "Feb 2020",
+                duration: "Jul 2019 - Feb 2020",
                 title: "Customer Service Intermediate",
-                logo: "./components/assets/randstadusas_logo.jpeg",
+                icon: <ScreenSearchDesktopIcon />,
+                logo: <img src={Randstad} className='company-logo' />,
                 company: "Randstad USA",
                 details: [
                     "Resolved technical issues as a Tier 1 Help Desk support in Target North Campus' HRO IT department, enhancing user experience.",
@@ -82,10 +93,10 @@ const MyInfoProvider = ({children}) => {
                 ]
             },
             {
-                start: "Mar 2019",
-                end: "May 2019",
+                duration: "Mar 2019 - May 2019",
                 title: "Support Analyst",
-                logo: "./components/assets/teksystems_logo.jpeg",
+                icon: <ScreenSearchDesktopIcon />,
+                logo: <img src={Teksystems} className='company-logo' />,
                 company: "TEKsystems",
                 details: [
                     "Supported Tier 1 Help Desk operations for the company's software utilized in computer testing in school districts across the nation, ensuring seamless user experience.",
@@ -94,26 +105,22 @@ const MyInfoProvider = ({children}) => {
                 ]
             },
             {
-                start: "Feb 2013",
-                end: "May 2016",
+                duration: "Feb 2013 - May 2016",
                 title: "Library Customer Service Assistant 1 & CreaTech Studio Mentor",
-                logo: "./components/assets/saint_paul_public_library_logo.jpeg",
+                icon: <GroupsIcon />,
+                logo: <img src={Sppl} className='company-logo' />,
                 company: "Saint Paul Public Library",
                 details: [
                     "Managed and curated the library's collection, including special collections, ensuring accessibility and organization.",
-                    "Proficiently utilized databases such as Sprockets, ActiveNet, and Sierra to streamline library operations and facilitate efficient information retrieval.",
-                    "Played a role in establishing a groundbreaking partnership between Saint Paul Public Libraries and Saint Paul Parks and Recreation at the Arlington Hills Community Center.",
-                    "Nurtured the Createch Studio into a supportive environment for local teens and tweens, fostering mentorship opportunities and facilitating STEM-related projects in collaboration with BestBuy.",
                     "Developed and executed community programming tailored to address the specific needs of the local community, promoting engagement and inclusivity.",
                     "Established a nurturing environment for teenagers to explore mentorship opportunities, cutting-edge technology, and social connections, fostering a sense of belonging and personal growth.",
-                    "Collaborated with the Library Associate, the Supervisor within the space, to identify and interview volunteers, ensuring a team of skilled and diverse individuals that represent the community and are capable of providing mentorship and guidance to teens.",
                     "Managed user databases including Sprockets, Sierra, and ActiveNet to facilitate seamless operations within the shared space between Saint Paul Public Libraries and Saint Paul Parks and Recreation.",
                     "Proactively acquired proficiency in new software and hardware to support ongoing technological advancements, enabling effective training and assistance for volunteers, teens, and other stakeholders."
                 ]
             }
         ]
     );
-    const [myProjects] = useState(
+    const [projects] = useState(
         [
             {
                 name: "",
@@ -124,7 +131,7 @@ const MyInfoProvider = ({children}) => {
     );
 
     return (
-        <MyInfoContext.Provider value={{myInfo, myImages, myExperiences, myProjects}}>
+        <MyInfoContext.Provider value={{robert, experiences, projects}} >
             {children}
         </MyInfoContext.Provider>
     )

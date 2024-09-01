@@ -4,7 +4,9 @@ const Headshot = () => {
 
     return (
         <section>
-            <p>image goes here.</p>
+            {/* <img src='' />
+            <img src='' />
+            <img src='' /> */}
         </section>
     )
 }
