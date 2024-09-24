@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import MyInfoContext from '../MyInfoContext';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import TargetLogo from './assets/randstadusa_logo.jpeg';
 
 const ExperiencesPage = () => {
     const {experiences} = useContext(MyInfoContext);
@@ -23,11 +22,11 @@ const ExperiencesPage = () => {
                         iconStyle={{ background: '#F0F0F0', boxShadow: '-3px 3px 10px #c0c0c0' }}
                         icon={experience.icon}
                         key={key}
-                        // dateClassName={"vertical-timeline-element-date"}
-                        // iconClassName={"vertical-timeline-element-icon"}
+                        dateClassName={"vertical-timeline-element-date"}
+                        iconClassName={"vertical-timeline-element-icon"}
                     >
                         <h3 className="vertical-timeline-element-title">{experience.title}</h3>
-                        {experience.logo}
+                        <div className="timeline-logo">{experience.logo}</div>
                         <h4 className="vertical-timeline-element-subtitle">{experience.company}</h4>
                         <ul>
                             {experience.details.map((detail, key) => {

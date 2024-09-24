@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import MyInfoContext from '../MyInfoContext';
+import TechTip from './TechTip';
 
 const AboutMeSection = () => {
     const {robert} = useContext(MyInfoContext);

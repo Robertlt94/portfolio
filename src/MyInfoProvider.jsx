@@ -4,6 +4,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import GroupsIcon from '@mui/icons-material/Groups';
 import CheckIcon from '@mui/icons-material/Check';
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
+import Seeds from './components/assets/seedsofsuccess_logo.jpeg';
 import Monicat from './components/assets/monicatdata_logo.jpeg';
 import Mdh from './components/assets/reading_math_inc_logo.jpeg';
 import Walmart from './components/assets/walmart_logo.jpeg';
@@ -11,22 +12,38 @@ import Brakebush from './components/assets/brakebush_chicken_logo.jpeg';
 import Randstad from './components/assets/randstadusa_logo.jpeg';
 import Teksystems from './components/assets/teksystems_logo.jpeg';
 import Sppl from './components/assets/saint_paul_public_library_logo.jpeg';
+import Boberto from './components/assets/Boberto.png';
+import Roberto from './components/assets/me.jpg';
+import Setup from './components/assets/setup.jpeg';
+
 
 const MyInfoProvider = ({children}) => {
     const [robert] = useState(
         {
             fullName: "Robert Thao",
-            profession: ["IT Professional", "Software Engineer", "Project Manager"],
+            profession: ["IT Professional", "Software Engineer", "Project Manager", "Scrum Master"],
             location: "Minnesota",
             about: "With a rich background spanning public health, retail, and community outreach, I bring a unique perspective to IT, software engineering, and project management. My journey across various industries has refined my problem-solving abilities, leadership skills, and customer-centric approach. Alongside my non-traditional path, I’ve pursued certifications in front-end and back-end development, full-stack software engineering, and project management, driven by a passion for technology and innovation. I thrive in dynamic, fast-paced environments, and am eager to leverage my multifaceted skills to create impactful solutions that meet the needs of both teams and clients."
         }
     );
+    const [heroImages] = useState([{id: 0, image: Boberto}, {id: 1, image: Roberto}, {id: 2, image: Setup}]);
     const [experiences] = useState(
         [
             {
+                duration: "Sep 2024 - Current",
+                title: "Project Manager & Software Develper",
+                icon: <CodeIcon />,
+                logo: <img src={Seeds} className='company-logo' />,
+                company: "Seeds of Success",
+                details: [
+                    "Project Manager: Led cross-functional teams in the development of the company product, utilizing Agile methodologies to ensure project success.",
+                    "Full-Stack Development: Designed and developed frontend UI/UX components using Figma and backend solutions using Express, REST APIs, SQL, and MongoDB, creating a scalable demo product for stakeholder engagement and pitching."
+                ]
+            },
+            {
                 duration: "July 2024 - Aug 2024",
                 title: "Software Engineer Intern",
-                icon: <CodeIcon color="" />,
+                icon: <CodeIcon />,
                 logo: <img src={Monicat} className='company-logo' />,
                 company: "Monicat Data",
                 details: [
@@ -131,7 +148,7 @@ const MyInfoProvider = ({children}) => {
     );
 
     return (
-        <MyInfoContext.Provider value={{robert, experiences, projects}} >
+        <MyInfoContext.Provider value={{robert, heroImages, experiences, projects}} >
             {children}
         </MyInfoContext.Provider>
     )

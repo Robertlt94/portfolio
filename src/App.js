@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import HomePage from './routes/HomePage';
 import MyInfoProvider from './MyInfoProvider';
+import MyInfoContext from './MyInfoContext';
 
 function App() {
 
