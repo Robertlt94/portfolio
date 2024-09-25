@@ -10,11 +10,9 @@ function App() {
   return (
     <MyInfoProvider>
       <Router>
-        <div className="main-background">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
       </Router>
     </MyInfoProvider>
   );

@@ -1,12 +1,57 @@
 * {
     /* color: #fff; */
     color: #000;
+    scroll-behavior: smooth;
 }
 
 .main-background {
     /* background: linear-gradient(#434343, #000); */
     background-color: #fff;
-    padding: 5vh 10vw;
+    padding: 15vh 10vw;
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    background: #222;
+    width: 100%;
+    height: 10vh;
+    z-index: 1;
+    color: #fff;
+}
+
+@media screen and (min-width: 625px) {
+    .navbar {
+        top: 0;
+        padding: 2vh 5vw;
+    }
+    .navbar ul li:first-child {
+        font-size: 2rem;
+        padding: 0;
+    }
+    .navbar ul li {
+        margin-top: 5vh;
+        margin-left: -3vw;
+    }
+}
+
+.navbar ul {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    flex:content;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .landing-images {
@@ -83,4 +128,10 @@
 
 .vertical-timeline-element-title, .timeline-logo, .vertical-timeline-element-subtitle {
     text-align: center;
+}
+
+.connects-logo {
+    height: 20vh;
+    display: flex;
+    flex: 1;
 }

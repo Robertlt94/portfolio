@@ -6,7 +6,7 @@ const LandingSection = () => {
     const {robert} = useContext(MyInfoContext);
 
     return (
-        <section className="about-section">
+        <header className="about-section" id="top-of-page">
 
             <h1>{robert.fullName}</h1>
             {robert.profession.map((title, key) => {
@@ -15,7 +15,7 @@ const LandingSection = () => {
             <article>
                 {robert.about}
             </article>
-        </section>
+        </header>
     )
 };
 

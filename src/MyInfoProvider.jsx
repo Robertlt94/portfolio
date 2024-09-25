@@ -15,6 +15,8 @@ import Sppl from './components/assets/saint_paul_public_library_logo.jpeg';
 import Boberto from './components/assets/Boberto.png';
 import Roberto from './components/assets/me.jpg';
 import Setup from './components/assets/setup.jpeg';
+import Linkedin from './components/assets/linkedin_logo.svg';
+import Github from './components/assets/github_logo.svg';
 
 
 const MyInfoProvider = ({children}) => {
@@ -27,6 +29,52 @@ const MyInfoProvider = ({children}) => {
         }
     );
     const [heroImages] = useState([{id: 0, image: Boberto}, {id: 1, image: Roberto}, {id: 2, image: Setup}]);
+    const [education] = useState(
+        [
+            {
+                subject: "Computer Science",
+                type: "Bachelor Degree",
+                school: "Metro State University",
+                graduationYear: "Current",
+            },
+            {
+                subject: "Meta Back-End Developer",
+                type: "Certificate",
+                school: "Coursera",
+                graduationYear: "Current",
+            },
+            {
+                subject: "Frontend Development",
+                type: "Certificate",
+                school: "Hack The Gap",
+                graduationYear: "2024",
+            },
+            {
+                subject: "Meta Front-End Developer Professional",
+                type: "Certificate",
+                school: "Coursera",
+                graduationYear: "2024",
+            },
+            {
+                subject: "Full Stack Software Engineering",
+                type: "Certificate",
+                school: "Prime Digital Academy",
+                graduationYear: "2022",
+            },
+            {
+                subject: "Business Management",
+                type: "Associate Degree",
+                school: "Mid-State Technical College",
+                graduationYear: "2021",
+            },
+            {
+                subject: "Project Management",
+                type: "Technical Diploma",
+                school: "Mid-State Technical College",
+                graduationYear: "2021",
+            }
+        ]
+    )
     const [experiences] = useState(
         [
             {
@@ -140,15 +188,52 @@ const MyInfoProvider = ({children}) => {
     const [projects] = useState(
         [
             {
-                name: "",
-                media: "",
-                details: ""
+                name: "test",
+                media: "test",
+                tech: "test",
+                details: "test"
+            },
+            {
+                name: "test",
+                media: "test",
+                tech: "test",
+                details: "test"
+            },
+            {
+                name: "test",
+                media: "test",
+                tech: "test",
+                details: "test"
+            },
+            {
+                name: "test",
+                media: "test",
+                tech: "test",
+                details: "test"
+            },
+            {
+                name: "test",
+                media: "test",
+                tech: "test",
+                details: "test"
             }
         ]
     );
+    const [connects] = useState(
+        [
+            {
+                platform: "LinkedIn",
+                logo: <img src={Linkedin} alt="Platform Logo" className="connects-logo"/>
+            },
+            {
+                platform: "GitHub",
+                logo: <img src={Github} alt="Platform Logo" className="connects-logo"/>
+            },
+        ]
+    )
 
     return (
-        <MyInfoContext.Provider value={{robert, heroImages, experiences, projects}} >
+        <MyInfoContext.Provider value={{robert, heroImages, education, experiences, projects, connects}} >
             {children}
         </MyInfoContext.Provider>
     )

@@ -8,7 +8,7 @@ const ExperiencesPage = () => {
 
     return (
         <section className='experiences-section' >
-            <h1 className='sub-headers' >Experiences</h1>
+            <h1 className='sub-headers' id="experiences-section-anchor">Experiences</h1>
             <VerticalTimeline
                 lineColor={'lightgrey'}
             >
