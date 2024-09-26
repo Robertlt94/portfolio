@@ -8,9 +8,9 @@ const FooterSection = () => {
         <section className='project-section' >
             <h1 className='sub-headers' id="bottom-of-page">Connect with me:</h1>
             <div>
-            {connects.map(((connect, key) => {
+            {connects.map(((connect, index) => {
                 return (
-                    <div className="education-container">
+                    <div className="education-container" key={index} >
                         <div>
                             {connect.logo}
                         </div>

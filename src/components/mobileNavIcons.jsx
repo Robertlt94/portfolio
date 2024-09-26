@@ -1,15 +1,13 @@
 import React from 'react';
 
-const mobileNavIcons = (icon, name) => {
+const MobileNavIcons = (icon, name) => {
 
     return (
-        <>
-            <>
-            {icon}
-            </>
-            <h6>{name}</h6>
-        </>
+        <div className='mobile-nav-btns'>
+            <h1>{icon}</h1>
+            <p>{name}</p>
+        </div>
     );
 };
 
-export default mobileNavIcons;
+export default MobileNavIcons;

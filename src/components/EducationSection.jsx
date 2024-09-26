@@ -7,14 +7,14 @@ const EducationSection = () => {
     return (
         <section className='education-section' >
             <h1 className='sub-headers' id="education-section-anchor">Education</h1>
-            {education.map(((degree) => {
+            {education.map(((degree, index) => {
                 return (
-                    <div className="education-container">
+                    <div className="education-container" key={index}>
                         <ul>
-                            <li>{degree.subject}</li>
-                            <li>{degree.type}</li>
                             <li>{degree.school}</li>
                             <li>{degree.graduationYear}</li>
+                            <li>{degree.subject}</li>
+                            <li>{degree.type}</li>
                         </ul>
                     </div>
                 )

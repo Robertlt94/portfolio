@@ -8,9 +8,9 @@ const ProjectSection = () => {
         <section className='project-section' >
             <h1 className='sub-headers' id="project-section-anchor">Projects</h1>
             <div>
-                {projects.map(((project, key) => {
+                {projects.map(((project, index) => {
                     return (
-                        <div className="education-container">
+                        <div className="education-container" key={index} >
                             <ul>
                                 <li>{project.name}</li>
                                 <li>{project.media}</li>

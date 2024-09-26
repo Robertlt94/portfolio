@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import Headshot from '../components/ImageCarousel';
 import NavBar from '../components/NavBar';
 import LandingSection from '../components/LandingSection';
 import ExperiencesSection from '../components/ExperiencesSection';
@@ -34,10 +33,10 @@ const HomePage = () => {
         <div>
             <NavBar viewPortWidth={viewPortWidth} />
             <div className="main-background">
-                <LandingSection />
-                <EducationSection />
-                <ExperiencesSection />
-                <ProjectSection />
+                <LandingSection id="top" />
+                <EducationSection id="education" />
+                <ExperiencesSection id="experience" />
+                <ProjectSection id="project" />
                 <FooterSection />
             </div>
         </div>
