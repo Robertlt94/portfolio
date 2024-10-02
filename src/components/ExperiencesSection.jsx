@@ -7,8 +7,8 @@ const ExperiencesPage = () => {
     const {experiences} = useContext(MyInfoContext);
 
     return (
-        <section className='experiences-section' id="experiences-section-anchor">
-            <h1 className='sub-headers'>Experiences</h1>
+        <section className='experiences-section' id="experiences">
+            <h1 className='sub-headers' id="experiences-section-anchor" >Experiences</h1>
             <VerticalTimeline
                 lineColor={'lightgrey'}
             >

@@ -4,20 +4,21 @@ import LandingImage from './LandingImage';
 
 const LandingSection = () => {
     const {robert} = useContext(MyInfoContext);
+    const greeting = "Hello, my name is Robert Thao and I am a"
+    const titles = ["IT Professional", " Software Engineer", "Project Manager", "Computer Science Student"]
+
+    let speed = 50;
 
     return (
-        <header id="top-of-page">
+        <section id="top-of-page">
             <div className='landing-image-container'>
                 <LandingImage />
             </div>
-            <h1 className="sub-headers">{robert.fullName}</h1>
-            {robert.profession.map((title, index) => {
-                <h4 className="sub-headers" key={index}>{title}</h4>
-            })}
+            <h1 className="sub-headers" id="typewriter-effect">Hello, my name is {robert.fullName}. I am a </h1>
             <article>
                 <p>{robert.about}</p>
             </article>
-        </header>
+        </section>
     )
 };
 

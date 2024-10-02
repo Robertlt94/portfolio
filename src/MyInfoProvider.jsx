@@ -17,7 +17,11 @@ import Roberto from './components/assets/me.jpg';
 import Setup from './components/assets/setup.jpeg';
 import Linkedin from './components/assets/linkedin_logo.svg';
 import Github from './components/assets/github_logo.svg';
-
+import MetroState from './components/assets/Metro_State_University.jpg';
+import MidState from './components/assets/Mid_State_Technical_College.jpg';
+import Coursera from './components/assets/Coursera_Online.svg';
+import HackTheGap from './components/assets/Hack_The_Gap.jpg';
+import PrimeDigitalAcademy from './components/assets/Prime_Digital_Academy.jpeg';
 
 const MyInfoProvider = ({children}) => {
     const [robert] = useState(
@@ -33,45 +37,52 @@ const MyInfoProvider = ({children}) => {
         [
             {
                 subject: "Computer Science",
-                type: "Bachelor Degree",
+                type: "Bachelor's Degree",
                 school: "Metro State University",
-                graduationYear: "Current",
+                graduationYear: "Current Student",
+                image: <img src={MetroState} className="school-picture" />,
             },
             {
                 subject: "Meta Back-End Developer",
                 type: "Certificate",
                 school: "Coursera",
-                graduationYear: "Current",
+                graduationYear: "Current Student",
+                image: <img src={Coursera} className="school-picture" />,
             },
             {
                 subject: "Frontend Development",
                 type: "Certificate",
                 school: "Hack The Gap",
                 graduationYear: "2024",
+                image: <img src={HackTheGap} className="school-picture" />,
             },
             {
                 subject: "Meta Front-End Developer Professional",
                 type: "Certificate",
                 school: "Coursera",
                 graduationYear: "2024",
+                image: <img src={Coursera} className="school-picture" />,
             },
             {
                 subject: "Full Stack Software Engineering",
                 type: "Certificate",
                 school: "Prime Digital Academy",
                 graduationYear: "2022",
+                image: <img src={PrimeDigitalAcademy} className="school-picture" />,
             },
             {
                 subject: "Business Management",
-                type: "Associate Degree",
+                type: "Associate's Degree",
                 school: "Mid-State Technical College",
                 graduationYear: "2021",
+                image: <img src={MidState} className="school-picture" />,
             },
             {
                 subject: "Project Management",
                 type: "Technical Diploma",
                 school: "Mid-State Technical College",
                 graduationYear: "2021",
+                image: <img src={MidState} className="school-picture" />,
             }
         ]
     )
@@ -222,10 +233,12 @@ const MyInfoProvider = ({children}) => {
     const [connects] = useState(
         [
             {
+                link: "https://www.linkedin.com/in/robertlt/",
                 platform: "LinkedIn",
                 logo: <img src={Linkedin} alt="Platform Logo" className="connects-logo"/>
             },
             {
+                link: "https://github.com/Robertlt94",
                 platform: "GitHub",
                 logo: <img src={Github} alt="Platform Logo" className="connects-logo"/>
             },

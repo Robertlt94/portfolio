@@ -4,7 +4,7 @@ import LandingSection from '../components/LandingSection';
 import ExperiencesSection from '../components/ExperiencesSection';
 import EducationSection from '../components/EducationSection';
 import ProjectSection from '../components/ProjectSection';
-import FooterSection from '../components/FooterSection';
+import ConnectSection from '../components/ConnectSection';
 
 const HomePage = () => {
     // variable to hold the width value of the viewport of the device the user is currently on
@@ -32,12 +32,12 @@ const HomePage = () => {
     return (
         <div>
             <NavBar viewPortWidth={viewPortWidth} />
-            <div className="main-background">
+            <div className="main-background" id="observeThis">
                 <LandingSection id="top" />
                 <EducationSection id="education" />
                 <ExperiencesSection id="experience" />
                 <ProjectSection id="project" />
-                <FooterSection />
+                <ConnectSection id="bottom" />
             </div>
         </div>
     )

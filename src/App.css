@@ -1,3 +1,5 @@
+
+
 /* General */
 
 * {
@@ -14,14 +16,12 @@
 }
 
 @media screen and (min-width: 625px) {
-    /* .main-background {
-        padding: 20vh 10vw;
-    } */
-    .sub-headers, header {
-        padding-top: 15vh;
+    .main-background {
+        padding: 20vh 10vw 0 10vw;
     }
-    header {
-        padding-top: 16vh;
+    .sub-headers {
+        font-size: 2rem;
+        padding-top: 15vh;
     }
 }
 
@@ -89,15 +89,20 @@
         list-style-type: none;
         flex:content;
     }
+    .navbar ul li, .navBar ul li:not(:first-child) {
+        transition: font-size 1s, font-weight 1s, color 1s;
+    }
+    /* highlights current nav button that the user is hovering */
     .navbar ul li a:hover {
         font-weight: bold;
         color: #A8C5FF;
-        text-decoration: underline;
     }
     .navbar ul li:not(:first-child):hover {
         font-size: 2rem;
     }
 }
+
+
 
 /* Landing Section */
 
@@ -128,7 +133,7 @@
 }
 
 .flip-image:hover .flip-image-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 
 .flip-image-front, .flip-image-back {
@@ -155,20 +160,87 @@
     transform: rotateY(180deg);
 }
 
-.about-section {
-
+@media screen and (min-width: 625px) {
+    #top-of-page article p {
+        font-size: 1.5rem;
+    }
 }
 
 /* Education Section */
 
 .education-container {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
 }
 
-.education-container ul {
+.each-education {
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
     box-shadow: -3px 3px 10px #c0c0c0;
+    border-radius: 8pt;
+}
+
+.school-picture {
+    width: inherit;
+    height: inherit;
+    z-index: 0;
+    opacity: .2;
+}
+
+.education-container div ul {
+    z-index: 1;
     list-style-type: none;
-    padding: 5vh 2vw;
+    height: 30vh;
+    width: 100%;
+    transform: translateY(-31vh);
+    background-color: #ffffffc9;
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+.education-container ul li p {
+    font-weight: 600;
+    /* font-size: 1.5rem; */
+    color: #000;
+    letter-spacing: 1px;
+    line-height: 50px;
+    margin: 0;
+}
+
+@media screen and (min-width: 625px) {
+    .education-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .education-container div ul {
+        transform: translateY(-80px);
+        background-color: #ffffffbf;
+    }
+    .each-education {
+        width: 35vw;
+        height: 30vh;
+        overflow: hidden;
+        box-shadow: -3px 3px 10px #c0c0c0;
+        border-radius: 8pt;
+        text-align: center;
+    }
+    .school-picture {
+        width: inherit;
+        height: inherit;
+        z-index: 0;
+        opacity: 1;
+    }
+    .each-education:hover > ul {
+        transition: transform 1s , background-color 1s;
+        transform: translateY(-200px);
+        background-color: #fffffff3;
+    }
 }
 
 /* Experience Section */
@@ -195,13 +267,58 @@
 /* Project Section */
 
 .project-section {
-
+    text-align: center;
 }
 
-/* Footer Section */
+.under-development {
+    color: #ff0000;
+}
+
+/* Connect Section */
+
+.connect-section {
+    padding-bottom: 10vh;
+}
+
+.connect-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.connect-container a {
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.each-connect {
+    border-radius: 50%;
+}
+
+.each-connect div {
+    background-color: transparent;
+    padding: 10px 20px;
+}
 
 .connects-logo {
     height: 20vh;
-    display: flex;
-    flex: 1;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 625px) {
+    .connect-container {
+        padding: 10vh 5vw;
+        flex-direction: row;
+    }
+    .each-connect {
+        width: 50%;
+        padding: 0;
+    }
+    .each-connect:hover > div .connects-logo {
+        box-shadow: -3px 3px 50px #757575;
+    }
+    .each-connect:hover > div h1 {
+        text-shadow: 0 0 30px #757575;
+        text-decoration: underline 3px solid #000;
+    }
 }
